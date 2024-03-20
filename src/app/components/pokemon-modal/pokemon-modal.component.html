@@ -1,0 +1,63 @@
+<script src="https://kit.fontawesome.com/3c7eb2fca9.js" crossorigin="anonymous"></script>
+
+<app-image-slider [sprites]="pokemon.sprites" [types]="pokemon.types"></app-image-slider>
+<div class="container">
+
+  <div class="Pokemon-Description" >
+    <h2 class="poke-name">{{ pokemon.name }}</h2>
+
+    <div class="types">
+      <span *ngFor="let type of pokemon.types" [style.background]="pokeservice.typeColor[type.type.name]">{{ type.type.name }}</span>
+    </div>
+    <div class="info-boxes">
+      <div class="info-box" *ngFor="let stat of pokemon.stats">
+        <h3 class="stat-name">{{ stat.stat.name }}</h3>
+
+        <p>{{ stat.base_stat }}</p>
+      </div>
+    </div>
+    <h3>The Abilities</h3>
+
+    <mat-accordion >
+      <div class="expansion-panel-container">
+
+      <mat-expansion-panel *ngFor="let ability of pokemon.abilities; let i = index">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ ability.ability.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ pokeAbilitiesDescription[i] }}</p>
+      </mat-expansion-panel>
+      </div>
+    </mat-accordion>
+
+    <div *ngIf="pokeItemsDescription.length != 0">
+      <h3>The Items</h3>
+
+      <mat-accordion >
+        <div class="expansion-panel-container">
+
+        <mat-expansion-panel *ngFor="let item of pokeItemsDescription; let i = index" >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{ item.name }} <img  [src]="item.sprites.default" alt="item">
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p><b>Category</b> {{ item.category.name }}</p>
+          <p><b>Effect</b> {{ item.effect_entries[0].effect }}</p>
+          <p><b>Short Effect</b> {{ item.effect_entries[0].short_effect}}</p>
+
+        </mat-expansion-panel>
+        </div>
+      </mat-accordion>
+    </div>
+    <h3>The Cries</h3>
+
+    <audio controls preload="metadata" *ngFor="let pokeAudio of pokeCries" >
+      <source [src]="pokeAudio" type="audio/ogg">
+    </audio>
+
+  </div>
+
+</div>

@@ -1,0 +1,92 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+.Pokemon-Description{
+    text-align: center;
+    justify-content: center;
+}
+
+
+audio:hover, audio:focus, audio:active
+{
+
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+transform: scale(1.05);
+}
+
+
+audio
+{
+width:40% ;
+margin-right: 10px;
+transition:all 0.5s linear;
+box-shadow: 2px 2px 4px 0px #006773;
+border-radius:7px 7px 7px 7px ;
+}
+  
+  .poke-name {
+    text-align: center;
+    font-weight: 600;
+  }
+  .types {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px 0;
+  }
+
+  .types span {
+    padding: 5px 20px; 
+    border-radius: 20px;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    margin: 5px;
+  }
+  
+  
+  .info-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .info-box {
+    width: 150px;
+    height: 80px;
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+
+  
+  .mat-expansion-panel {
+    width: calc(50% - 20px); 
+    margin: auto;
+  }
+
+  mat-accordion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  @media (max-width: 768px) {
+    .mat-expansion-panel {
+      width: calc(90% - 20px); 
+      margin: auto;
+    }
+  
+  }
+
+  

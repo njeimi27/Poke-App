@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .search-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .poke-cards {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 200px;
+    padding-left: 4%;
+    margin-bottom: 200px;
+  }
+  
+  .poke-card {
+    width: 23%;
+    height: 300px;
+    box-shadow: 1px 2px 5px black;
+    display: grid;
+    
+    padding-bottom: 10px;
+
+  }
+
+
+  
+  @media (max-width: 992px) {
+    .poke-cards {
+      padding-left: 15%;
+      padding-right: 5%;
+
+      grid-gap: 200px;
+
+    }
+    .poke-card{
+      width: 90%;
+
+    }
+  }
+  
+  @media (min-width: 993px) and (max-width: 1200px) {
+    .poke-cards {
+      padding-left: 15%;
+      padding-right: 5%;
+
+      grid-gap: 200px;
+
+
+    }
+    .poke-card{
+      width: 35%;
+
+    }
+  
+  }
+  
+  @media (min-width: 1201px) {
+    .poke-cards {
+      padding-left: 10%;
+      padding-right: 5%;
+
+      grid-gap: 190px;
+
+
+    }
+    .poke-card{
+      width: 22%;
+
+    } 
+   }
+
+

@@ -1,0 +1,68 @@
+.slider-container {
+  position: relative;
+  width: 70%;
+  margin: 0 auto; 
+}
+
+.image-container {
+  margin-top: 10px;
+  text-align: center; 
+}
+
+.poke-img {
+  display: inline-block; 
+  width: 180px;
+  height: 200px;
+  margin: 20px auto; 
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicators span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicators span.active {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+
+  .poke-img {
+    display: inline-block; 
+    width: 120px;
+    height: 150px;
+    margin: 20px auto; 
+  }
+}

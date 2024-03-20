@@ -1,0 +1,21 @@
+<div class="slider-container" [style]="pokeservice.safeCss(this.types)" style="border: 1px;border-radius: 5%;">
+  <div class="image-container">
+    <img class="poke-img" [src]="slides[currentSlide]" alt="slide">
+  </div>
+  
+  <!-- Indicators -->
+  <div class="indicators">
+    <span *ngFor="let slide of slides; let i = index" 
+          [class.active]="i === currentSlide"
+          (click)="goToSlide(i)">
+    </span>
+  </div>
+  
+  <!-- Navigation arrows -->
+  <button mat-icon-button class="prev-button" (click)="prevSlide()">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <button mat-icon-button class="next-button" (click)="nextSlide()">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
+</div>

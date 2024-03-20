@@ -1,0 +1,26 @@
+<div id="card" [style]="pokeservice.CardsafeCss(this.types)" (mouseenter)="showButton($event)" (mouseleave)="hideButton($event)">
+  <p class="hp">
+    <span>HP</span>
+    {{ pokemon.stats[0].base_stat }}
+  </p>
+  <img [src]="pokemon.sprites.other.dream_world.front_default" alt="Pokemon" />
+  <h2 class="poke-name">{{ pokemon.name }}</h2>
+  <div class="types">
+    <span *ngFor="let type of types" [style.background]="pokeservice.typeColor[type.type.name]">{{ type.type.name }}</span>
+  </div>
+  <div class="stats">
+    <div>
+      <h3>{{ pokemon.stats[1].base_stat }}</h3>
+      <p>Attack</p>
+    </div>
+    <div>
+      <h3>{{ pokemon.stats[2].base_stat }}</h3>
+      <p>Defense</p>
+    </div>
+    <div>
+      <h3>{{ pokemon.stats[5].base_stat }}</h3>
+      <p>Speed</p>
+    </div>
+  </div>
+  <button class="hover-button" (click)="openModal(pokemon)">Details </button>
+</div>
