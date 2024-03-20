@@ -24,7 +24,6 @@ export class PokemonModalComponent implements OnInit{
 
   constructor(public dialogRef: MatDialogRef<PokemonModalComponent>,@Inject(MAT_DIALOG_DATA) public data: any,public pokeservice:PokeService) {
     this.pokemon = data.content;
-    console.log("chosen pokemon",this.pokemon);
   }
 
   ngOnInit(): void {
@@ -32,10 +31,6 @@ export class PokemonModalComponent implements OnInit{
     this.exportCries();
     this.getAbilities();
     this.getItems();
-
-    console.log("chosen pokemon items",this.pokeItemsDescription);
-
-  
 
   }
 
@@ -72,10 +67,7 @@ export class PokemonModalComponent implements OnInit{
         });
       });
     }
-    for (let i = 0; i < this.pokeItemsDescription.length; i++) {
-      console.log("Items Name :", this.pokeItemsDescription[i].name);
-      console.log("Item Description :", this.pokeItemsDescription[i].effect_entries[0]);
-    }
+  
   }
   
 
